@@ -3,7 +3,7 @@
   border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
   padding: 10px;
-  background-color: #c5fcf6;
+  background-color: #fff;
   margin-left: 10%;
   margin-top: 20px;
   box-sizing: border-box;
@@ -27,11 +27,10 @@
   margin-left: 10%;
   border-radius: 10px;
   transition-duration: 0.4s;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* background-color: rgb(8, 180, 248); */
+  /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .butn:hover {
-  background-color: #0c08f5;
+  background-color: #ff3f6c;
   color: white;
 }
 .disabled {

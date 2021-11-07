@@ -5,7 +5,7 @@ import Order from './components/Order';
 
 function Myorders() {
   return (
-    <div >
+    <div style={{backgroundColor:'#dedede',height:'100vh'}}>
     <Navbar1/>
     <Order/>
     </div>

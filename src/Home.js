@@ -15,7 +15,7 @@ function Home() {
   
   
   return (
-    <div >
+    <div style={{backgroundColor:'#F5F5F6'}}>
     <Navbar1/>
 <div>
  {

@@ -12,18 +12,18 @@ import {Container,Nav ,NavDropdown, Navbar } from 'react-bootstrap';
             <div>
             <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">Myntra</Navbar.Brand>
+    <Navbar.Brand href="/">Myntra</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="#link">WishList</Nav.Link>
         <NavDropdown title="Profile" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">My Account</NavDropdown.Item>
+          <NavDropdown.Item href="/">My Account</NavDropdown.Item>
           <NavDropdown.Item href="/myorders">My Orders</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Myntra Studio</NavDropdown.Item>
+          <NavDropdown.Item href="/">Myntra Studio</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Log Out</NavDropdown.Item>
+          <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
