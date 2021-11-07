@@ -5,6 +5,7 @@ import Home from './Home';
 import Myorders from './Myorders';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import UploadPage from './Upload';
+import Success from './SuccessPage';
 function App() {
   return (
    <div>
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/upload">
           <UploadPage/>
+        </Route>
+        <Route path="/uploadSuccess">
+        <Success/>
         </Route>
       </Switch>
     </Router>

@@ -3,13 +3,11 @@ import Navbar1  from './components/Navbar1';
 import './upload.css';
 import { useState } from 'react';
 import {storage,db} from './firebase/config';
-// import {collection,addDoc} from 'firebase/firestore';
 
 function UploadPage() {
-  // const [image , setImage] = useState('');
   const [caption,setCaption]=useState('');
   const [fileUrl,setFileUrl]=useState('');
-  var f=0;
+  
  const onFileChange = async (e)=>{
    const file=e.target.files[0];
    const storageRef=storage.ref();
@@ -19,16 +17,14 @@ function UploadPage() {
  } 
  const onSubmit =(e)=>{
    e.preventDefault();
-   if(f===0){
-     alert("Please verify from the Myntra Executive first.");
-     return;
-   }
+  
    db.collection("Posts").doc(caption).set({
      Name:"Ayush Sinha",
      ImageURL:fileUrl,
      Profilepic:"kuch bhi ho",
      Caption:caption
    })
+   document.location.href='./uploadSuccess';
  }
   // const upload = ()=>{
   //   if(image == null)
@@ -49,12 +45,9 @@ function UploadPage() {
      <br/>
       <label style={{marginTop:'3vh',marginRight:'15px'}} >Caption</label>
       <input type="text" style={{border: '2px solid grey',width:'70%'}} onChange={(e)=>{setCaption(e.target.value)}}></input><br/>
-      <div class="form-check form-switch" style={{marginTop:'3vh'}}>
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onChange={(e)=>{f=1-f;}}/>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Verification of Attire</label>
-</div>
+     
       <button type="button" onClick={onSubmit} className="btn btn-primary btn-sm" style={{marginTop:'2vh'}}>Upload</button>
-
+   
       </div>
     </div>
     </div>

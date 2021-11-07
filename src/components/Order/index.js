@@ -15,10 +15,12 @@ function  Order(){
      return (
     
     <div >
+
     <div ><a className={(amount>10000)? "":"disabled"}  href="./upload">
 <button type="button" className=" butn" style={{widt:'100%'}}>Post on Myntra Studio</button></a>
 </div>
-<h2 style={{marginTop:'4vh', marginLeft:'4vh'}}>Total Purchase Amount : {amount} Ruppes.</h2>
+<h3 style={{marginTop:'4vh', marginLeft:'4vh'}}>Total Purchase Amount : {amount} Ruppes.</h3>
+<small className="font-italic" style={{marginLeft:'4vh'}}>{(amount>10000)? "You are eligible to Post on Studio":"Shop more to get Post access to Studio."}</small>
 
 
 {
