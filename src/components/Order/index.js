@@ -1,48 +1,43 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Component } from 'react';
+import { Component ,useState,useEffect} from 'react';
 import './order.css';
+import {db} from '../../firebase/config';
 
-
-class Order extends Component{
-render() {
-    var im="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLIIe_7Nqeew_snlv8JrE3P2ss7CrrdkQ0aw&usqp=CAU";
-      return (
+function  Order(){
+  var amount=0;
+  const [orders,setOrders]=useState([]);
+  useEffect( ()=>{
+    db.collection('Orders').onSnapshot(snapshot =>{
+      setOrders(snapshot.docs.map(doc=>doc.data()));
+    })
+  },[])
+  orders.map((vari)=>(amount+=vari.Price));
+     return (
     
     <div >
-    <div ><a href="./upload">
+    <div ><a className={(amount>10000)? "":"disabled"}  href="./upload">
 <button type="button" className=" butn" style={{widt:'100%'}}>Post on Myntra Studio</button></a>
 </div>
-<div className="Order">
-<img src={im} alt="John Doe" className="r pic" />
+<h2 style={{marginTop:'4vh', marginLeft:'4vh'}}>Total Purchase Amount : {amount} Ruppes.</h2>
+
+
+{
+  orders.map(
+    (im)=>(
+      <div className="Order">
+<img src={im.Image} alt="Cloth" className="r pic" />
     <div className="ord">
-    <p>Ingredients: Salad(1) </p>
-    <p>Price: <strong>USD 5.45</strong></p> 
+    <p>{im.Brand} </p>
+    <p>Price: <strong>{im.Price}</strong></p> 
     </div>
   </div>
-  <div className="Order">
-<img src={im} alt="Ayush" className="r pic" />
-    <div className="ord">
-    <p>Ingredients: Burger </p>
-    <p>Price: <strong>USD 2.25</strong></p> 
-    </div>
-  </div>
-  <div className="Order">
-<img src={im} alt="Ayush" className="r pic" />
-    <div className="ord">
-    <p>Ingredients: Burger </p>
-    <p>Price: <strong>USD 2.25</strong></p> 
-    </div>
-  </div>
-  <div className="Order">
-<img src={im} alt="Ayush" className="r pic" />
-    <div className="ord">
-    <p>Ingredients: Burger </p>
-    <p>Price: <strong>USD 2.25</strong></p> 
-    </div>
-  </div>
+    )
+  ) 
+}
+
     </div>
     
   );
 }
-}
+
 export default Order;

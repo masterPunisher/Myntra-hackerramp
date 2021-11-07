@@ -34,3 +34,8 @@
   background-color: #0c08f5;
   color: white;
 }
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}

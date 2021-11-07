@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.page {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 240, 240);
+}
+.box {
+  height: 50vh;
+  width: 50vw;
+  border-radius: 4vh;
+  background-color: rgb(145, 145, 145);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+}
+.imgholder {
+  /* padding: 1%; */
+  position: relative;
+  height: 80%;
+  width: 80%;
+  align-content: center;
+  /* background-color: rgb(251, 253, 251); */
+}
+/* .image-upload > input {
+  display: none;
+} */
