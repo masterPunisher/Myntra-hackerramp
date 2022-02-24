@@ -1,6 +1,7 @@
 >Myntra Hackerramp 2021
 
 **Collaborators**
-*Ayush Sinha
-*Praful Chauhan  
-*Hrithik Agarhari
+
+1. Ayush Sinha
+2. Praful Chauhan  
+3. Hrithik Agarhari
